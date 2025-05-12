@@ -1,0 +1,215 @@
+/* 基本樣式重設 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* 您可以替換成您喜歡的字體 */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* 頁首 Header */
+header {
+    background: #35424a; /* 深藍灰色背景 */
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: #e8491d 3px solid; /* 橘色下邊框 */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+    color: #e8491d; /* 懸停時變橘色 */
+}
+
+/* 主要內容 Main */
+main {
+    padding-bottom: 20px; /* 避免頁尾遮擋內容 */
+}
+
+/* 英雄區塊 Hero Section */
+#hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover; /* 您可以替換成您自己的背景圖片 */
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #e8491d;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #35424a;
+}
+
+/* 產品區塊 Products Section */
+#products {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#products h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 響應式網格布局 */
+    gap: 2rem;
+    padding: 0 20px; /* 左右留白 */
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px; /* 固定圖片高度，保持一致性 */
+    object-fit: cover; /* 保持圖片比例並填滿容器 */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #35424a;
+}
+
+.product-card .price {
+    font-size: 1.1rem;
+    color: #e8491d;
+    margin-bottom: 1rem;
+}
+
+.product-card button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background: #e8491d;
+}
+
+/* 關於我們 About Section */
+#about, #contact {
+    padding: 2rem 20px; /* 左右留白 */
+    background: #ffffff;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+#about h2, #contact h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+#about p, #contact p, #contact ul {
+    margin-bottom: 1rem;
+    text-align: justify; /* 左右對齊文字 */
+}
+
+#contact ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#contact ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* 頁尾 Footer */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem; /* 與主要內容間隔 */
+}
+
+/* 響應式設計 - 針對小螢幕調整 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* 在小螢幕上，產品卡片堆疊顯示 */
+    }
+
+    #about, #contact {
+        margin: 1rem 0;
+    }
+}
